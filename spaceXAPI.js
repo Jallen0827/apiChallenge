@@ -6,15 +6,15 @@ let selectTerm = document.querySelector('.rockets');
 
 addEventListener('onchange', fetchResults);
 
-function dropDown(){
+function fetchDropDownData(){
     fetch(baseURL).then(function(results){
         return results.json();
     }).then(function(json){        
-        populateSelect(json);
+        populateDropDown(json);
     })
 };
 
-function populateSelect(json){
+function populateDropDown(json){
     let launchSite = [];
     for (i=0; i<json.length; i++){    
         let current = json[i];
@@ -83,7 +83,7 @@ function displayResults(json){
                 let payloadMassKg = current.rocket.second_stage.payloads[0].payload_mass_kg;
                 let payloadMassLb = current.rocket.second_stage.payloads[0].payload_mass_lbs;
 
-                overlayClassName = `overlay${i}`;
+                
                 overlay.setAttribute("class", "overlay");
                 overlay.setAttribute("onmouseover", "overlayVisible(this)");
                 overlay.setAttribute("onmouseout", "overlayHidden(this)");
@@ -92,8 +92,8 @@ function displayResults(json){
                 overlay.style.width = '100%';
                 overlay.style.opacity = '0';
                 overlay.style.transition = '.1s ease';
-                overlay.style.backgroundColor = '#b8c6db';
-                overlay.style.backgroundImage = 'linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%)';
+                overlay.style.backgroundColor = ' #48dbfb';
+                overlay.style.backgroundImage = 'linear-gradient(315deg, #48dbfb 0%, #d3d3d3 74%)';
                 
 
                 paraRocketName.innerText = rocketName;
@@ -113,6 +113,7 @@ function displayResults(json){
                 card.appendChild(overlay);            
                 col.appendChild(card);  
                 row.appendChild(col);
+                console.log(col);
             }
         }
     }
