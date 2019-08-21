@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "spacex-api-challenge"
+    "default": "spacex-api-challenge",
+    "spaceX API": "spacex-api-challenge"
   }
 }
