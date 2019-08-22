@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="main.css">
 
 </head>
-<body onload="fetchDropDownData()">
+<body onload="fetchDropDownData()"> <!--Added function call in body tag to fetch json data for dropdown menu-->
     <section class="jumbotron text-center">
         <div class="container">
             <h1 class="jumbotron-heading">Rocket Launch Data</h1>
@@ -21,13 +21,15 @@
         <div class= 'wrapper'>
             <form action="submit">
                 <p>
-                  <select name="rockets" class='rockets' onchange="changedValue()">
+                  <select name="rockets" class='rockets' onchange="changedValue()"> <!--Setting up dropdown menu that will be populated with launch sites-->
                     <option value="LaunchSite">Select Your Launch Site:</option>                        
                   </select>                           
                 </p>
             </form>
+        <div id='test'>
+          <div id='map'></div> 
+        </div>            
     </section>
-
     <main role="main">        
       <div class="album py-5 bg-dark">
         <div class="container"> 
@@ -36,7 +38,10 @@
         </div>
       </div>
     </main>
-    
     <script src='spaceXAPI.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAtva3MP6ve_iYOQLHiyeAqHNT-40nDrg&callback=initMap"
+    async defer></script> <!--Added extra script tag to use googles Map API-->
+    
+    
 </body>
 </html>

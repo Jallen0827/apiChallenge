@@ -1,0 +1,28 @@
+{
+  "name": "spacex",
+  "version": "5.3.0",
+  "description": "openlayers",
+  "main": "spaceXAPI.js",
+  "dependencies": {
+    "ol": "^5.3.3",
+    "parcel-bundler": "^1.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "import Map form 'ol/Map.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jallen0827/apiChallenge.git"
+  },
+  "keywords": [
+    "spacex",
+    "api"
+  ],
+  "author": "Jallen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jallen0827/apiChallenge/issues"
+  },
+  "homepage": "https://github.com/Jallen0827/apiChallenge#readme"
+}
